@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2113F062819F2C800103308 /* WizelineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F052819F2C800103308 /* WizelineApp.swift */; };
+		E2113F082819F2C800103308 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F072819F2C800103308 /* ContentView.swift */; };
+		E2113F0A2819F2CE00103308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2113F092819F2CE00103308 /* Assets.xcassets */; };
+		E2113F0D2819F2CE00103308 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2113F0C2819F2CE00103308 /* Preview Assets.xcassets */; };
+		E2113F14281A9E1300103308 /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F13281A9E1300103308 /* BookImageView.swift */; };
+		E2113F16281AA03C00103308 /* BookDetailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F15281AA03C00103308 /* BookDetailImageView.swift */; };
+		E2113F18281AA14D00103308 /* LazyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F17281AA14D00103308 /* LazyNavigationView.swift */; };
+		E2113F1A281AA94800103308 /* ButtonPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F19281AA94800103308 /* ButtonPillView.swift */; };
+		E2113F1C281AAC7100103308 /* FilledButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F1B281AAC7100103308 /* FilledButtonView.swift */; };
+		E2113F1E281ABD5E00103308 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F1D281ABD5E00103308 /* BookModel.swift */; };
+		E2113F21281ABE0700103308 /* StaticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F20281ABE0700103308 /* StaticHelper.swift */; };
+		E2113F23281AC0A900103308 /* BookItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F22281AC0A900103308 /* BookItemView.swift */; };
+		E2113F25281AC55900103308 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F24281AC55900103308 /* BookListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E2113F022819F2C800103308 /* Wizeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wizeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2113F052819F2C800103308 /* WizelineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizelineApp.swift; sourceTree = "<group>"; };
+		E2113F072819F2C800103308 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E2113F092819F2CE00103308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2113F0C2819F2CE00103308 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E2113F13281A9E1300103308 /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
+		E2113F15281AA03C00103308 /* BookDetailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailImageView.swift; sourceTree = "<group>"; };
+		E2113F17281AA14D00103308 /* LazyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNavigationView.swift; sourceTree = "<group>"; };
+		E2113F19281AA94800103308 /* ButtonPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPillView.swift; sourceTree = "<group>"; };
+		E2113F1B281AAC7100103308 /* FilledButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonView.swift; sourceTree = "<group>"; };
+		E2113F1D281ABD5E00103308 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		E2113F20281ABE0700103308 /* StaticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticHelper.swift; sourceTree = "<group>"; };
+		E2113F22281AC0A900103308 /* BookItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemView.swift; sourceTree = "<group>"; };
+		E2113F24281AC55900103308 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2113EFF2819F2C700103308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2113EF92819F2C700103308 = {
+			isa = PBXGroup;
+			children = (
+				E2113F042819F2C800103308 /* Wizeline */,
+				E2113F032819F2C800103308 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2113F032819F2C800103308 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F022819F2C800103308 /* Wizeline.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2113F042819F2C800103308 /* Wizeline */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F052819F2C800103308 /* WizelineApp.swift */,
+				E2113F24281AC55900103308 /* BookListView.swift */,
+				E2113F072819F2C800103308 /* ContentView.swift */,
+				E2113F1B281AAC7100103308 /* FilledButtonView.swift */,
+				E2113F19281AA94800103308 /* ButtonPillView.swift */,
+				E2113F17281AA14D00103308 /* LazyNavigationView.swift */,
+				E2113F13281A9E1300103308 /* BookImageView.swift */,
+				E2113F15281AA03C00103308 /* BookDetailImageView.swift */,
+				E2113F1F281ABDED00103308 /* Model */,
+				E2113F092819F2CE00103308 /* Assets.xcassets */,
+				E2113F0B2819F2CE00103308 /* Preview Content */,
+				E2113F22281AC0A900103308 /* BookItemView.swift */,
+			);
+			path = Wizeline;
+			sourceTree = "<group>";
+		};
+		E2113F0B2819F2CE00103308 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F0C2819F2CE00103308 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E2113F1F281ABDED00103308 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F1D281ABD5E00103308 /* BookModel.swift */,
+				E2113F20281ABE0700103308 /* StaticHelper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2113F012819F2C700103308 /* Wizeline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2113F102819F2CE00103308 /* Build configuration list for PBXNativeTarget "Wizeline" */;
+			buildPhases = (
+				E2113EFE2819F2C700103308 /* Sources */,
+				E2113EFF2819F2C700103308 /* Frameworks */,
+				E2113F002819F2C700103308 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wizeline;
+			productName = Wizeline;
+			productReference = E2113F022819F2C800103308 /* Wizeline.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2113EFA2819F2C700103308 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					E2113F012819F2C700103308 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = E2113EFD2819F2C700103308 /* Build configuration list for PBXProject "Wizeline" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2113EF92819F2C700103308;
+			productRefGroup = E2113F032819F2C800103308 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2113F012819F2C700103308 /* Wizeline */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2113F002819F2C700103308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2113F0D2819F2CE00103308 /* Preview Assets.xcassets in Resources */,
+				E2113F0A2819F2CE00103308 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2113EFE2819F2C700103308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2113F23281AC0A900103308 /* BookItemView.swift in Sources */,
+				E2113F1C281AAC7100103308 /* FilledButtonView.swift in Sources */,
+				E2113F16281AA03C00103308 /* BookDetailImageView.swift in Sources */,
+				E2113F1A281AA94800103308 /* ButtonPillView.swift in Sources */,
+				E2113F21281ABE0700103308 /* StaticHelper.swift in Sources */,
+				E2113F18281AA14D00103308 /* LazyNavigationView.swift in Sources */,
+				E2113F082819F2C800103308 /* ContentView.swift in Sources */,
+				E2113F14281A9E1300103308 /* BookImageView.swift in Sources */,
+				E2113F25281AC55900103308 /* BookListView.swift in Sources */,
+				E2113F1E281ABD5E00103308 /* BookModel.swift in Sources */,
+				E2113F062819F2C800103308 /* WizelineApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E2113F0E2819F2CE00103308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2113F0F2819F2CE00103308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2113F112819F2CE00103308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wizeline/Preview Content\"";
+				DEVELOPMENT_TEAM = 68435FU9T3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugozeal.Wizeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2113F122819F2CE00103308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wizeline/Preview Content\"";
+				DEVELOPMENT_TEAM = 68435FU9T3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugozeal.Wizeline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2113EFD2819F2C700103308 /* Build configuration list for PBXProject "Wizeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2113F0E2819F2CE00103308 /* Debug */,
+				E2113F0F2819F2CE00103308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2113F102819F2CE00103308 /* Build configuration list for PBXNativeTarget "Wizeline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2113F112819F2CE00103308 /* Debug */,
+				E2113F122819F2CE00103308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2113EFA2819F2C700103308 /* Project object */;
+}
