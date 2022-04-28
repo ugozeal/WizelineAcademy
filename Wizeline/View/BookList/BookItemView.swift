@@ -10,23 +10,21 @@ import SwiftUI
 struct BookItemView: View {
     var book: BookModel
     var body: some View {
-        HStack(alignment: .top) {
+        HStack() {
             BookImageView(image: Image(book.imageName))
             VStack(alignment: .leading) {
-                Spacer()
                 Text(book.bookName)
                     .foregroundColor(.black)
-                    .font(.title2)
+                    .font(.headline)
                     .fontWeight(.semibold)
                 
-                Text(book.author)
+                Text("by \(book.author)")
                     .foregroundColor(.gray)
                     .font(.subheadline)
-                Spacer()
+                Spacer().frame(height: 15)
                 Text("$\(book.priceToDouble())")
                     .foregroundColor(.green)
                     .font(.title)
-                Spacer()
             }
         }
     }

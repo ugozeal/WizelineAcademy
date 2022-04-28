@@ -11,13 +11,18 @@ struct BookListView: View {
     var books: [BookModel] = bookList
     var body: some View {
         NavigationView {
-            List {
-                ForEach(books, id: \.self) { book in
-                    NavigationLink(destination: LazyNavigationView(BookDetailsView(book: book))) {
-                        BookItemView(book: book)
-                    }
+            List(books) { book in
+                NavigationLink(destination: LazyNavigationView(BookDetailsView(book: book))) {
+                    BookItemView(book: book)
                 }
             }
+//            List {
+//                ForEach(books) { book in
+//                    NavigationLink(destination: LazyNavigationView(BookDetailsView(book: book))) {
+//                        BookItemView(book: book)
+//                    }
+//                }
+//            }
             .navigationBarTitle("Book list")
         }
         .navigationViewStyle(StackNavigationViewStyle())

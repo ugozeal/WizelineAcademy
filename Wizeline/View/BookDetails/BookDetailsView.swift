@@ -12,47 +12,58 @@ struct BookDetailsView: View {
     var body: some View {
         VStack {
             BookDetailImageView(image: Image(book.imageName))
+            
+            Spacer()
+                .frame(height: 30)
+            
             Text(book.author)
                 .foregroundColor(.gray)
                 .font(.subheadline)
-                .padding(.top)
             
             Text(book.bookName)
                 .foregroundColor(.black)
-                .font(.title2)
-                .fontWeight(.semibold)
+                .font(.system(size: 24, weight: .semibold))
+                .padding([.leading, .trailing], 20)
+            
+            Spacer()
+                .frame(height: 20)
+            
             Text("In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.")
                 .foregroundColor(.gray)
                 .font(.body)
                 .fontWeight(.regular)
                 .lineLimit(4)
-                .padding(.top, 2)
-                .padding(.bottom, 8)
+                .lineSpacing(6)
+                .padding([.leading, .trailing], 20)
+            
+            Spacer()
+                .frame(height: 20)
+
             HStack(spacing: 20) {
                 ButtonPillView(text: "Fantasy", action: {
-                    print("Why na")
+                    print("Do something")
                 })
                 
                 ButtonPillView(text: "Action", action: {
-                    print("Why na")
+                    print("Do something")
                 })
                 
                 ButtonPillView(text: "Novel", action: {
-                    print("Why na")
+                    print("Do something")
                 })
             }
+            .padding(.bottom, 10)
+            
             Divider()
-                .padding(.vertical)
+                .padding(.bottom, 30)
+                .padding([.leading, .trailing], 20)
             
             HStack {
                 FilledButtonView(text: "Buy for $\(book.priceToDouble())", textColor: Color.white, backgroundColor: Color.black) {
                     print("Buy now")
                 }
             }
-            .padding(.vertical)
-        }
-        .padding(.horizontal)
-        
+        }        
     }
 }
 
