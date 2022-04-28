@@ -16,8 +16,8 @@ struct BookItemView: View {
                 Text(book.bookName)
                     .foregroundColor(.black)
                     .font(.title2)
-                .fontWeight(.semibold)
-                .padding(.top, 18)
+                    .fontWeight(.semibold)
+                    .padding(.top, 18)
                 
                 Text(book.author)
                     .foregroundColor(.gray)
@@ -28,8 +28,6 @@ struct BookItemView: View {
                     .padding(.top, 10)
                 
             }
-            
-            
         }
     }
 }

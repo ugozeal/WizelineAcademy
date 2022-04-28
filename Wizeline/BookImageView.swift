@@ -18,7 +18,6 @@ struct BookImageView: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 10, x: 5, y: 5)
             .padding()
-                        
     }
 }
 

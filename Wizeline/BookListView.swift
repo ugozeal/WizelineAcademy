@@ -13,7 +13,7 @@ struct BookListView: View {
         NavigationView {
             List {
                 ForEach(books, id: \.self) { book in
-                    NavigationLink(destination: LazyNavigationView(ContentView(book: book))) {
+                    NavigationLink(destination: LazyNavigationView(BookDetailsView(book: book))) {
                         BookItemView(book: book)
                     }
                 }

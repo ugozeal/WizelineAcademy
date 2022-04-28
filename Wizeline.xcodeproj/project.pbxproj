@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E2113F062819F2C800103308 /* WizelineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F052819F2C800103308 /* WizelineApp.swift */; };
-		E2113F082819F2C800103308 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F072819F2C800103308 /* ContentView.swift */; };
+		E2113F082819F2C800103308 /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F072819F2C800103308 /* BookDetailsView.swift */; };
 		E2113F0A2819F2CE00103308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2113F092819F2CE00103308 /* Assets.xcassets */; };
 		E2113F0D2819F2CE00103308 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2113F0C2819F2CE00103308 /* Preview Assets.xcassets */; };
 		E2113F14281A9E1300103308 /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F13281A9E1300103308 /* BookImageView.swift */; };
@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		E2113F022819F2C800103308 /* Wizeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wizeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2113F052819F2C800103308 /* WizelineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizelineApp.swift; sourceTree = "<group>"; };
-		E2113F072819F2C800103308 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E2113F072819F2C800103308 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
 		E2113F092819F2CE00103308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2113F0C2819F2CE00103308 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2113F13281A9E1300103308 /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 			children = (
 				E2113F052819F2C800103308 /* WizelineApp.swift */,
 				E2113F24281AC55900103308 /* BookListView.swift */,
-				E2113F072819F2C800103308 /* ContentView.swift */,
+				E2113F072819F2C800103308 /* BookDetailsView.swift */,
 				E2113F1B281AAC7100103308 /* FilledButtonView.swift */,
 				E2113F19281AA94800103308 /* ButtonPillView.swift */,
 				E2113F17281AA14D00103308 /* LazyNavigationView.swift */,
@@ -178,7 +178,7 @@
 				E2113F1A281AA94800103308 /* ButtonPillView.swift in Sources */,
 				E2113F21281ABE0700103308 /* StaticHelper.swift in Sources */,
 				E2113F18281AA14D00103308 /* LazyNavigationView.swift in Sources */,
-				E2113F082819F2C800103308 /* ContentView.swift in Sources */,
+				E2113F082819F2C800103308 /* BookDetailsView.swift in Sources */,
 				E2113F14281A9E1300103308 /* BookImageView.swift in Sources */,
 				E2113F25281AC55900103308 /* BookListView.swift in Sources */,
 				E2113F1E281ABD5E00103308 /* BookModel.swift in Sources */,

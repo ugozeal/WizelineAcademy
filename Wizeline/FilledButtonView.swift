@@ -29,8 +29,8 @@ struct FilledButtonView: View {
                 .background(backgroundColor)
                 .cornerRadius(.infinity)
                 .compositingGroup()
-        }
-        Spacer()
+            }
+            Spacer()
         }
     }
 }

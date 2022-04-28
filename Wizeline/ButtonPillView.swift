@@ -23,7 +23,7 @@ struct ButtonPillView: View {
             .padding(.horizontal)
             .overlay(RoundedRectangle(cornerRadius: 20)
                         .stroke(.black, lineWidth: 1))
-    }
+        }
     }
 }
 
