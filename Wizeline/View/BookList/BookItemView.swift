@@ -13,20 +13,20 @@ struct BookItemView: View {
         HStack(alignment: .top) {
             BookImageView(image: Image(book.imageName))
             VStack(alignment: .leading) {
+                Spacer()
                 Text(book.bookName)
                     .foregroundColor(.black)
                     .font(.title2)
                     .fontWeight(.semibold)
-                    .padding(.top, 18)
                 
                 Text(book.author)
                     .foregroundColor(.gray)
                     .font(.subheadline)
+                Spacer()
                 Text("$\(book.priceToDouble())")
                     .foregroundColor(.green)
                     .font(.title)
-                    .padding(.top, 10)
-                
+                Spacer()
             }
         }
     }

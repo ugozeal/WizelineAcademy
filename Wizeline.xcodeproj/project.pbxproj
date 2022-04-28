@@ -70,17 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				E2113F052819F2C800103308 /* WizelineApp.swift */,
-				E2113F24281AC55900103308 /* BookListView.swift */,
-				E2113F072819F2C800103308 /* BookDetailsView.swift */,
-				E2113F1B281AAC7100103308 /* FilledButtonView.swift */,
-				E2113F19281AA94800103308 /* ButtonPillView.swift */,
-				E2113F17281AA14D00103308 /* LazyNavigationView.swift */,
-				E2113F13281A9E1300103308 /* BookImageView.swift */,
-				E2113F15281AA03C00103308 /* BookDetailImageView.swift */,
+				E2113F29281AD50400103308 /* View */,
+				E2113F26281AD26500103308 /* Utils */,
 				E2113F1F281ABDED00103308 /* Model */,
 				E2113F092819F2CE00103308 /* Assets.xcassets */,
 				E2113F0B2819F2CE00103308 /* Preview Content */,
-				E2113F22281AC0A900103308 /* BookItemView.swift */,
 			);
 			path = Wizeline;
 			sourceTree = "<group>";
@@ -100,6 +94,44 @@
 				E2113F20281ABE0700103308 /* StaticHelper.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E2113F26281AD26500103308 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F15281AA03C00103308 /* BookDetailImageView.swift */,
+				E2113F17281AA14D00103308 /* LazyNavigationView.swift */,
+				E2113F1B281AAC7100103308 /* FilledButtonView.swift */,
+				E2113F19281AA94800103308 /* ButtonPillView.swift */,
+				E2113F13281A9E1300103308 /* BookImageView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E2113F27281AD4E200103308 /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F24281AC55900103308 /* BookListView.swift */,
+				E2113F22281AC0A900103308 /* BookItemView.swift */,
+			);
+			path = BookList;
+			sourceTree = "<group>";
+		};
+		E2113F28281AD4F200103308 /* BookDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F072819F2C800103308 /* BookDetailsView.swift */,
+			);
+			path = BookDetails;
+			sourceTree = "<group>";
+		};
+		E2113F29281AD50400103308 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2113F28281AD4F200103308 /* BookDetails */,
+				E2113F27281AD4E200103308 /* BookList */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
