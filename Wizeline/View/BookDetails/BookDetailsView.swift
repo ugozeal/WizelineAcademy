@@ -9,9 +9,20 @@ import SwiftUI
 
 struct BookDetailsView: View {
     var book: BookModel
+    @State var animate = false
+    
+    var randomMinRange = 5.0
+    var randomMaxRange = 8.0
+    
     var body: some View {
         VStack {
             BookDetailImageView(image: Image(book.imageName))
+                .scaleEffect(animate ? 1: 0)
+                .rotationEffect(.degrees(animate ? 0 : 180))
+                .opacity(animate ? 1: 0)
+                .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
+                            .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
+                           value: animate)
             
             Spacer()
                 .frame(height: 30)
@@ -43,14 +54,32 @@ struct BookDetailsView: View {
                 ButtonPillView(text: "Fantasy", action: {
                     print("Do something")
                 })
+                    .scaleEffect(animate ? 1: 0)
+                    .rotationEffect(.degrees(animate ? 0 : 180))
+                    .opacity(animate ? 1: 0)
+                    .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
+                                .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
+                               value: animate)
                 
                 ButtonPillView(text: "Action", action: {
                     print("Do something")
                 })
+                    .scaleEffect(animate ? 1: 0)
+                    .rotationEffect(.degrees(animate ? 0 : 180))
+                    .opacity(animate ? 1: 0)
+                    .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
+                                .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
+                               value: animate)
                 
                 ButtonPillView(text: "Novel", action: {
                     print("Do something")
                 })
+                    .scaleEffect(animate ? 1: 0)
+                    .rotationEffect(.degrees(animate ? 0 : 180))
+                    .opacity(animate ? 1: 0)
+                    .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
+                                .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
+                               value: animate)
             }
             .padding(.bottom, 10)
             
@@ -62,8 +91,19 @@ struct BookDetailsView: View {
                 FilledButtonView(text: "Buy for $\(book.priceToDouble())", textColor: Color.white, backgroundColor: Color.black) {
                     print("Buy now")
                 }
+                .scaleEffect(animate ? 1: 0)
+                .rotationEffect(.degrees(animate ? 0 : 180))
+                .opacity(animate ? 1: 0)
+                .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
+                            .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
+                           value: animate)
             }
-        }        
+        }
+        .onAppear {
+            withAnimation {
+                animate.toggle()
+            }
+        }
     }
 }
 

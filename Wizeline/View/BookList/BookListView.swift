@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BookListView: View {
     var books: [BookModel] = bookList
+    
     var body: some View {
         NavigationView {
             List(books) { book in
