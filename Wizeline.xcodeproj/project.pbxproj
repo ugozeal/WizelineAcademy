@@ -20,6 +20,11 @@
 		E2113F21281ABE0700103308 /* StaticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F20281ABE0700103308 /* StaticHelper.swift */; };
 		E2113F23281AC0A900103308 /* BookItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F22281AC0A900103308 /* BookItemView.swift */; };
 		E2113F25281AC55900103308 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2113F24281AC55900103308 /* BookListView.swift */; };
+		E293899E281C90B8001BE331 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293899D281C90B7001BE331 /* CartView.swift */; };
+		E29389A0281C90F5001BE331 /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E293899F281C90F5001BE331 /* CartModel.swift */; };
+		E29389A2281DDA0A001BE331 /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29389A1281DDA0A001BE331 /* CartButtonView.swift */; };
+		E29389A4281DDC16001BE331 /* CartImageOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29389A3281DDC16001BE331 /* CartImageOverlay.swift */; };
+		E29389A6281DE0CE001BE331 /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29389A5281DE0CE001BE331 /* CartItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		E2113F20281ABE0700103308 /* StaticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticHelper.swift; sourceTree = "<group>"; };
 		E2113F22281AC0A900103308 /* BookItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemView.swift; sourceTree = "<group>"; };
 		E2113F24281AC55900103308 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		E293899D281C90B7001BE331 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		E293899F281C90F5001BE331 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		E29389A1281DDA0A001BE331 /* CartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButtonView.swift; sourceTree = "<group>"; };
+		E29389A3281DDC16001BE331 /* CartImageOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartImageOverlay.swift; sourceTree = "<group>"; };
+		E29389A5281DE0CE001BE331 /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,7 @@
 		E2113F042819F2C800103308 /* Wizeline */ = {
 			isa = PBXGroup;
 			children = (
+				E293899C281C909D001BE331 /* CartView */,
 				E2113F052819F2C800103308 /* WizelineApp.swift */,
 				E2113F29281AD50400103308 /* View */,
 				E2113F26281AD26500103308 /* Utils */,
@@ -92,6 +103,7 @@
 			children = (
 				E2113F1D281ABD5E00103308 /* BookModel.swift */,
 				E2113F20281ABE0700103308 /* StaticHelper.swift */,
+				E293899F281C90F5001BE331 /* CartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +144,17 @@
 				E2113F27281AD4E200103308 /* BookList */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E293899C281C909D001BE331 /* CartView */ = {
+			isa = PBXGroup;
+			children = (
+				E293899D281C90B7001BE331 /* CartView.swift */,
+				E29389A1281DDA0A001BE331 /* CartButtonView.swift */,
+				E29389A3281DDC16001BE331 /* CartImageOverlay.swift */,
+				E29389A5281DE0CE001BE331 /* CartItemView.swift */,
+			);
+			path = CartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,13 +228,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2113F23281AC0A900103308 /* BookItemView.swift in Sources */,
+				E29389A6281DE0CE001BE331 /* CartItemView.swift in Sources */,
 				E2113F1C281AAC7100103308 /* FilledButtonView.swift in Sources */,
 				E2113F16281AA03C00103308 /* BookDetailImageView.swift in Sources */,
 				E2113F1A281AA94800103308 /* ButtonPillView.swift in Sources */,
+				E29389A2281DDA0A001BE331 /* CartButtonView.swift in Sources */,
 				E2113F21281ABE0700103308 /* StaticHelper.swift in Sources */,
 				E2113F18281AA14D00103308 /* LazyNavigationView.swift in Sources */,
+				E293899E281C90B8001BE331 /* CartView.swift in Sources */,
+				E29389A4281DDC16001BE331 /* CartImageOverlay.swift in Sources */,
 				E2113F082819F2C800103308 /* BookDetailsView.swift in Sources */,
 				E2113F14281A9E1300103308 /* BookImageView.swift in Sources */,
+				E29389A0281C90F5001BE331 /* CartModel.swift in Sources */,
 				E2113F25281AC55900103308 /* BookListView.swift in Sources */,
 				E2113F1E281ABD5E00103308 /* BookModel.swift in Sources */,
 				E2113F062819F2C800103308 /* WizelineApp.swift in Sources */,

@@ -49,7 +49,7 @@ struct BookDetailsView: View {
             
             Spacer()
                 .frame(height: 20)
-
+            
             HStack(spacing: 20) {
                 ButtonPillView(text: "Fantasy", action: {
                     print("Do something")
