@@ -7,14 +7,24 @@
 
 import Foundation
 
-struct CartItems {
-    var id: Int
+struct CartItems: Identifiable {
+    var id: String
     var item: BookModel
     var unit: Int
 }
 
-struct Cart {
+class Cart: ObservableObject {
     var items: [CartItems]
     var numberOfItems: Int
-    var total: Int
+    var total: Double 
+    
+    init(items: [CartItems], numberOfItems: Int, total: Double) {
+        self.numberOfItems = numberOfItems
+        self.items = items
+        self.total = total
+    }
+    
+    func totalToDouble() -> String {
+        return String(format: "%.2f", total)
+    }
 }

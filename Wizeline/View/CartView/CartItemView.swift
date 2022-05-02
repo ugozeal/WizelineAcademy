@@ -10,7 +10,7 @@ import SwiftUI
 struct CartItemView: View {
     var item: CartItems
     var body: some View {
-        HStack(spacing: 15) {
+        HStack() {
             BookImageView(image: Image(item.item.imageName))
             
             VStack(alignment: .leading) {
@@ -21,6 +21,7 @@ struct CartItemView: View {
                     .bold()
             }
             .padding([.top, .bottom])
+            .frame(width: 150)
             
             Image(systemName: "circle")
                 .resizable()
@@ -35,8 +36,9 @@ struct CartItemView: View {
 
 struct CartItemView_Previews: PreviewProvider {
     static var previews: some View {
-        let book = bookList[0]
-        let item = CartItems(id: 1, item: book, unit: 2)
+        let bookService: MockBookService = MockBookService()
+        let book = ViewModel(mockBookService: bookService).mockBookService.books[0]
+        let item = CartItems(id: "1", item: book, unit: 2)
         CartItemView(item: item)
     }
 }

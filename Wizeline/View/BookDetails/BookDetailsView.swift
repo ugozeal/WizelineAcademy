@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct BookDetailsView: View {
-    var book: BookModel
+    var bookId: Int
+    @State var showModal = false
     @State var animate = false
+    @State var showAlert = false
     
     var randomMinRange = 5.0
     var randomMaxRange = 8.0
     
+    @ObservedObject var viewModel: ViewModel
+    
+    init(service: MockBookService, bookId: Int) {
+        self.viewModel = ViewModel(mockBookService: service)
+        self.bookId = bookId
+    }
+    
+    func getBook() -> BookDetail {
+        return viewModel.mockBookService.bookDetails(bookId: bookId)
+    }
+    
+    func addToCart() {
+        viewModel.mockBookService.addToCart(bookId: bookId)
+    }
+    
     var body: some View {
         VStack {
-            BookDetailImageView(image: Image(book.imageName))
+            BookDetailImageView(image: Image(getBook().imageName))
                 .scaleEffect(animate ? 1: 0)
                 .rotationEffect(.degrees(animate ? 0 : 180))
                 .opacity(animate ? 1: 0)
@@ -27,19 +44,20 @@ struct BookDetailsView: View {
             Spacer()
                 .frame(height: 30)
             
-            Text(book.author)
+            Text(getBook().author)
                 .foregroundColor(.gray)
                 .font(.subheadline)
             
-            Text(book.bookName)
+            Text(getBook().title)
                 .foregroundColor(.black)
+                .multilineTextAlignment(.center)
                 .font(.system(size: 24, weight: .semibold))
                 .padding([.leading, .trailing], 20)
             
             Spacer()
                 .frame(height: 20)
             
-            Text("In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.")
+            Text(getBook().description)
                 .foregroundColor(.gray)
                 .font(.body)
                 .fontWeight(.regular)
@@ -51,35 +69,15 @@ struct BookDetailsView: View {
                 .frame(height: 20)
             
             HStack(spacing: 20) {
-                ButtonPillView(text: "Fantasy", action: {
-                    print("Do something")
-                })
-                    .scaleEffect(animate ? 1: 0)
-                    .rotationEffect(.degrees(animate ? 0 : 180))
-                    .opacity(animate ? 1: 0)
-                    .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
-                                .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
-                               value: animate)
-                
-                ButtonPillView(text: "Action", action: {
-                    print("Do something")
-                })
-                    .scaleEffect(animate ? 1: 0)
-                    .rotationEffect(.degrees(animate ? 0 : 180))
-                    .opacity(animate ? 1: 0)
-                    .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
-                                .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
-                               value: animate)
-                
-                ButtonPillView(text: "Novel", action: {
-                    print("Do something")
-                })
-                    .scaleEffect(animate ? 1: 0)
-                    .rotationEffect(.degrees(animate ? 0 : 180))
-                    .opacity(animate ? 1: 0)
-                    .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
-                                .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
-                               value: animate)
+                ForEach(getBook().genre, id: \.self){ genre in
+                    ButtonPillView(text: genre.rawValue)
+                        .scaleEffect(animate ? 1: 0)
+                        .rotationEffect(.degrees(animate ? 0 : 180))
+                        .opacity(animate ? 1: 0)
+                        .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
+                                    .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
+                                   value: animate)
+                }
             }
             .padding(.bottom, 10)
             
@@ -88,20 +86,42 @@ struct BookDetailsView: View {
                 .padding([.leading, .trailing], 20)
             
             HStack {
-                FilledButtonView(text: "Buy for $\(book.priceToDouble())", textColor: Color.white, backgroundColor: Color.black) {
-                    print("Buy now")
+                if getBook().isAvailable {
+                    FilledButtonView(text: "Read", textColor: Color.white, backgroundColor: Color.green) {
+                        print("Buy now")
+                    }
+                } else {
+                    FilledButtonView(text: "Buy for $\(getBook().priceToDouble())", textColor: Color.white, backgroundColor: Color.black) {
+                        addToCart()
+                        showAlert = true
+                    }
+                    .alert(isPresented: $showAlert, content: {
+                        Alert(title: Text("Book has been added to cart"), message: Text("You are ready to proceed to checkout to complete your order"), dismissButton: .default(Text("OK")))
+                    })
+                    .scaleEffect(animate ? 1: 0)
+                    .rotationEffect(.degrees(animate ? 0 : 180))
+                    .opacity(animate ? 1: 0)
+                    .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
+                                .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
+                               value: animate)
                 }
-                .scaleEffect(animate ? 1: 0)
-                .rotationEffect(.degrees(animate ? 0 : 180))
-                .opacity(animate ? 1: 0)
-                .animation(.spring(response: 0.7, dampingFraction: 0.4, blendDuration: 1)
-                            .delay(Double.random(in: randomMinRange..<randomMaxRange) * 0.1),
-                           value: animate)
             }
-        }
-        .onAppear {
-            withAnimation {
-                animate.toggle()
+            .navigationBarItems(trailing: Button(action: {
+                if viewModel.mockBookService.numberOfCartItems() > 0 {
+                    self.showModal = true
+                }
+            }) {
+                CartButtonView(numberOfItems: self.viewModel.mockBookService.cart.numberOfItems)
+            }.sheet(isPresented: $showModal, onDismiss: {
+                
+            }) {
+                CartView(showModal: self.$showModal, service: self.viewModel.mockBookService)
+            })
+            .navigationBarTitle(Text(""), displayMode: .inline)
+            .onAppear {
+                withAnimation {
+                    animate.toggle()
+                }
             }
         }
     }
@@ -109,6 +129,7 @@ struct BookDetailsView: View {
 
 struct BookDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailsView(book: bookList[0])
+        let bookService: MockBookService = MockBookService()
+        BookDetailsView(service: bookService, bookId: 1)
     }
 }

@@ -18,3 +18,28 @@ struct BookModel: Hashable, Identifiable {
         return String(format: "%.2f", price)
     }
 }
+
+enum Genre: String {
+    case fantasy = "Fantasy"
+    case action = "Action"
+    case history = "History"
+    case present = "Present"
+    case drama = "Drama"
+    case scienceFiction = "Sci-Fi"
+    case economics = "Economics"
+    case business = "Business"
+}
+
+struct BookDetail: Identifiable {
+    var id: String
+    var bookId: Int
+    var author, title: String
+    var price: Double
+    var genre: [Genre]
+    var kind, description, imageName : String
+    var isAvailable: Bool
+    
+    func priceToDouble() -> String {
+        return String(format: "%.2f", price)
+    }
+}

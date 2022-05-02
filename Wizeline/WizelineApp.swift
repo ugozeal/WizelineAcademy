@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct WizelineApp: App {
+    let bookService: MockBookService = MockBookService()
     var body: some Scene {
         WindowGroup {
-            BookListView(books: bookList)
+            BookListView(service: bookService)
         }
     }
 }

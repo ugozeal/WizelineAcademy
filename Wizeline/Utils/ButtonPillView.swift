@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ButtonPillView: View {
     var text: String
-    var action: () -> Void
+    var action: (() -> Void?)? = nil
     
     var body: some View {
         Button {
+            guard let action = action else {
+                return
+            }
+
             action()
         } label: {
             HStack {

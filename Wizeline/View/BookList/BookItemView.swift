@@ -32,6 +32,8 @@ struct BookItemView: View {
 
 struct BookItemView_Previews: PreviewProvider {
     static var previews: some View {
-        BookItemView(book: bookList[0])
+        let bookService: MockBookService = MockBookService()
+        let book = ViewModel(mockBookService: bookService).mockBookService.books[0]
+        BookItemView(book: book)
     }
 }
